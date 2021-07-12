@@ -1,0 +1,23 @@
+{
+  "name": "express-react-template",
+  "version": "1.0.0",
+  "description": "Template for serving a React app through an Express server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcampo2/express-react-template.git"
+  },
+  "author": "Michael Campo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mcampo2/express-react-template/issues"
+  },
+  "homepage": "https://github.com/mcampo2/express-react-template#readme",
+  "dependencies": {
+    "create-react-app": "^4.0.3",
+    "express-generator": "^4.16.1"
+  }
+}
