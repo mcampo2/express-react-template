@@ -1,7 +1,8 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
 var cookieParser = require('cookie-parser');
+var express = require('express');
+var fs = require('fs');
+var createError = require('http-errors');
+var path = require('path');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
@@ -19,7 +20,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+// serve the client build folder if it exists
+if (fs.existsSync(path.join(__dirname, '../client/build')))
+  app.use('/', express.static(path.join(__dirname, '../client/build')));
+else app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
