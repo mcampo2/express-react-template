@@ -1,7 +1,7 @@
 express-react-template
 ======================
 
-Template for serving a React app through an Express server.<br>
+Template for serving a React app through an Express server.
 
 ## Project Structure
 | Folder                        |Description            |
